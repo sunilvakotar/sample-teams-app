@@ -1,0 +1,43 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.11",
+    "version": "1.0.0",
+    "id": "your-app-id",
+    "packageName": "com.example.teamsapp",
+    "developer": {
+        "name": "Your Name",
+        "websiteUrl": "https://your-website.com",
+        "privacyUrl": "https://your-website.com/privacy",
+        "termsOfUseUrl": "https://your-website.com/terms"
+    },
+    "icons": {
+        "color": "color-icon.png",
+        "outline": "outline-icon.png"
+    },
+    "name": {
+        "short": "Teams WebApp",
+        "full": "Microsoft Teams Web Application"
+    },
+    "description": {
+        "short": "A web app inside Microsoft Teams",
+        "full": "This application is a simple web app that integrates into Microsoft Teams as a tab."
+    },
+    "accentColor": "#FFFFFF",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://your-deployed-url.com/config",
+            "canUpdateConfiguration": true
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "home",
+            "name": "Home",
+            "contentUrl": "https://your-deployed-url.com",
+            "websiteUrl": "https://your-deployed-url.com",
+            "scopes": ["personal"]
+        }
+    ],
+    "permissions": ["identity", "messageTeamMembers"],
+    "validDomains": ["your-deployed-url.com"]
+}
